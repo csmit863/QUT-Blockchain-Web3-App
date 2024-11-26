@@ -13,7 +13,7 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 *  with an adjustable membershipFee in a currency tbd.
  * @author csmit863
  */
-contract ClubMembershipNFT is ERC721, Ownable {
+contract YourContract is ERC721, Ownable {
 
     bool private transferable = false;
     uint256 public membershipFee = 0; 
