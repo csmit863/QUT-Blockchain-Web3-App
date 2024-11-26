@@ -4,7 +4,6 @@ pragma solidity ^0.8.19;
 import "./DeployHelpers.s.sol";
 // default
 import { DeployYourContract } from "./DeployYourContract.s.sol";
-import { DeployMembershipContract } from "./DeployMembershipNFT.s.sol";
 
 
 contract DeployScript is ScaffoldETHDeploy {

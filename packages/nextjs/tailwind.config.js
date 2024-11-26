@@ -77,6 +77,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      fontFamily: {
+        dotGothic: ['"DotGothic16"', 'sans-serif'],
+      },
       boxShadow: {
         center: "0 0 12px -2px rgb(0 0 0 / 0.05)",
       },
@@ -85,4 +88,5 @@ module.exports = {
       },
     },
   },
+  plugins:[]
 };
