@@ -20,8 +20,8 @@ export const menuLinks: HeaderMenuLink[] = [
     href: "/",
   },  
   {
-    label: "Club Docs",
-    href: "/about",
+    label: "Docs",
+    href: "/docs",
     icon: <ClipboardDocumentIcon className="h-4 w-4" />
   },
   {
