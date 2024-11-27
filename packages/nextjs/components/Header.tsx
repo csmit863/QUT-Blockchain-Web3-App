@@ -4,7 +4,7 @@ import React, { useCallback, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Bars3Icon, BugAntIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon, BugAntIcon, ClipboardDocumentIcon, BuildingLibraryIcon, CurrencyDollarIcon, AcademicCapIcon, ChatBubbleOvalLeftEllipsisIcon } from "@heroicons/react/24/outline";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
 
@@ -18,8 +18,32 @@ export const menuLinks: HeaderMenuLink[] = [
   {
     label: "Home",
     href: "/",
+  },  
+  {
+    label: "Club Docs",
+    href: "/about",
+    icon: <ClipboardDocumentIcon className="h-4 w-4" />
   },
-
+  {
+    label: "Our Members",
+    href: "/members",
+    icon: <AcademicCapIcon className="h-4 w-4" />
+  },
+  {
+    label: "Treasury",
+    href: "https://app.safe.global/home?safe=arb1:0x94C0F3A8de71D2E7EDC7aC02BB87fc39d605559f",
+    icon: <CurrencyDollarIcon className="h-4 w-4" />
+  },
+  {
+    label: "Governance",
+    href: "https://snapshot.org/#/callumsmith.eth/proposal/0xec98b05aaaa1b3434d1ced311c3b7f0e878e713cfd5e2bc98ecf3d6bd5b3f529",
+    icon: <BuildingLibraryIcon className="h-4 w-4" />
+  },
+  {
+    label: "Discord",
+    href: "https://discord.gg/yaEeAcZqz5",
+    icon: <ChatBubbleOvalLeftEllipsisIcon className="h-4 w-4"/>
+  },
   {
     label: "Debug Contracts",
     href: "/debug",
