@@ -64,7 +64,7 @@ const Home: NextPage = () => {
               </a><br/><br/>
               Our aim is to provide a platform for like-minded students to connect locally and discuss, build, experiment and have fun onchain.
             </p>
-            <a href="#prizes" className="btn btn-outline border-white rounded-md">
+            <a href="#prizes" className="btn btn-outline rounded-md">
             Upcoming Events
             </a>
           </div>
