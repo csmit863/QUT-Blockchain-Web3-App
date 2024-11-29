@@ -33,7 +33,7 @@ export function Faucet() {
             {hasNFT ? (
                 <>
                 <p className="text-sm md:text-base">
-                    Club members can access up to <span className="font-semibold">0.25 testnet ETH</span> on supported networks.
+                    Club members can access up to <span className="font-semibold">X testnet ETH</span> on supported networks.
                 </p>
                 <p className="text-xs text-gray-500 dark:text-gray-400">
                     Supported networks: Sepolia
