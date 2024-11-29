@@ -125,6 +125,24 @@ const deployedContracts = {
         },
         {
           type: "function",
+          name: "mintMembership",
+          inputs: [
+            {
+              name: "_memberAddress",
+              type: "address",
+              internalType: "address",
+            },
+            {
+              name: "_paymentToken",
+              type: "address",
+              internalType: "address",
+            },
+          ],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
           name: "name",
           inputs: [],
           outputs: [

@@ -9,14 +9,19 @@ import qutblockchainlogo from "~~/public/qutblockchainlogo.png";
 import tap from "~~/public/tap.png";
 import Image from "next/image";
 
+/*
+point of contact
+information source
+infrastructure for membership
+infrastructure for governance
+
+*/
 
 const Home: NextPage = () => {
   const { address: connectedAddress } = useAccount();
 
   return (
     <>
-      
-      
       <div className="pt-16 bg-[url(/dot-texture.svg)]">
         <div className="mx-auto max-w-7xl px-6 lg:flex lg:items-center lg:gap-x-10 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
