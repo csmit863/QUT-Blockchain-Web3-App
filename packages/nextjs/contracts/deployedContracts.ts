@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 const deployedContracts = {
   31337: {
     YourContract: {
-      address: "0x700b6a60ce7eaaea56f065753d8dcb9653dbad35",
+      address: "0xb19b36b1456e65e3a6d514d3f715f204bd59f431",
       abi: [
         {
           type: "constructor",
@@ -133,9 +133,9 @@ const deployedContracts = {
               internalType: "address",
             },
             {
-              name: "_paymentToken",
-              type: "address",
-              internalType: "address",
+              name: "_studentNumber",
+              type: "uint256",
+              internalType: "uint256",
             },
           ],
           outputs: [],
@@ -188,8 +188,34 @@ const deployedContracts = {
         },
         {
           type: "function",
+          name: "renewMembership",
+          inputs: [
+            {
+              name: "_studentNumber",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
+          outputs: [],
+          stateMutability: "payable",
+        },
+        {
+          type: "function",
           name: "renounceOwnership",
           inputs: [],
+          outputs: [],
+          stateMutability: "nonpayable",
+        },
+        {
+          type: "function",
+          name: "revokeMembership",
+          inputs: [
+            {
+              name: "_studentNumber",
+              type: "uint256",
+              internalType: "uint256",
+            },
+          ],
           outputs: [],
           stateMutability: "nonpayable",
         },

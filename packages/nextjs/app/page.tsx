@@ -3,12 +3,10 @@
 import Link from "next/link";
 import type { NextPage } from "next";
 import { useAccount } from "wagmi";
-import { BugAntIcon, MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import { Address } from "~~/components/scaffold-eth";
 import qutblockchainlogo from "~~/public/qutblockchainlogo.png";
-import tap from "~~/public/tap.png";
 import Image from "next/image";
-
+import { Faucet } from "./_components/Faucet";
 /*
 point of contact
 information source
@@ -36,7 +34,7 @@ const Home: NextPage = () => {
               <br></br>
               To join, simply hit "Join Club →", then enter your QUT email and click "mint membership". 
               Upon registration you will be entitled to access to all of our shared resources and services including labs,
-              workshop events, networking, testnet faucets, and much more (not to mention being part of our community :D ).
+              workshop events, networking, testnet faucets and much more.
             </p>
             <div className="mt-10 flex items-center gap-x-6">
               <Link href="/register" className="btn btn-primary rounded-md">
@@ -80,21 +78,23 @@ const Home: NextPage = () => {
             </dl>
           </div>
           <div className="flex items-center flex-col flex-grow pt-10">
-            <div className="px-5">
+
+            
+          <div className="px-5">
               <div className="flex justify-center items-center space-x-2 flex-col sm:flex-row">
                 <p className="my-2 font-medium">Connected Address:</p>
                 <Address address={connectedAddress} />
               </div>
 
-            <div className="flex justify-center items-center space-x-2 flex-col sm:flex-row">
-              <p className="my-2 font-medium">Helpful Services</p>
-                <Link href="https://github.com/csmit863/QUT-Faucet"><button>
-                  (QUT Faucet)
-                </button></Link>
-                <Link href=""><button>
-                  (Node Endpoints)
-                </button></Link>
-            </div>
+              <div className="flex justify-center items-center space-x-2 flex-col sm:flex-row">
+                <p className="my-2 font-medium">Helpful Services</p>
+                  <Link href="https://github.com/csmit863/QUT-Faucet"><button>
+                    (QUT Faucet)
+                  </button></Link>
+                  <Link href=""><button>
+                    (Node Endpoints)
+                  </button></Link>
+              </div>
 
             </div>
 
@@ -108,17 +108,7 @@ const Home: NextPage = () => {
         <div className="bg-blue-600 h-8 w-[40%] opacity-40"></div>
         <div className="bg-blue-600 h-8 w-[20%] opacity-20"></div>
       </div>
-      <div id="faucet" className="py-28">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <h2 className="text-3xl font-dotGothic tracking-wide md:text-4xl">Use our faucet!</h2>
-          Club members can access up to 0.25 testnet ETH on _supported-networks_
-          <p className="mt-12 leading-relaxed text-lg md:leading-8 md:text-xl">
-            sign msg with wallet, input desired address and hit confirm.
-          </p>
-        </div>
-        <Image src={tap} alt="tap"/>
-      </div>
-    
+      <Faucet />
     </>
 
   );

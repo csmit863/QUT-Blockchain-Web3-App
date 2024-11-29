@@ -46,6 +46,10 @@ contract YourContract is ERC721, Ownable {
         membershipExpirations[_studentNumber] = block.timestamp + 365 days; // e.g., 1-year renewal
     }
 
+    function _exists(uint256 _studentNumber) internal view returns (bool) { // Same logic as OpenZeppelin's _exists
+        return ownerOf(_studentNumber) != address(0); 
+    }
+
     function revokeMembership(uint256 _studentNumber) public onlyOwner {
         // revoke membership in case account is compromised to prevent malicious voting on snapshot
         require(_exists(_studentNumber), "Membership does not exist."); // Ensure token exists
