@@ -31,7 +31,7 @@ contract YourContract is ERC721, Ownable {
         membershipFee = newFee;
     }
 
-    function mintMembership(address _memberAddress, uint256 _studentNumber) public { // , address _paymentToken
+    function mintMembership(address _memberAddress, uint256 _studentNumber) public onlyOwner { // , address _paymentToken 
         // determine whether _paymentToken is an accepted currency and then transfer a mapped fee amount to the contract
         // check if the student number is already taken
         require(!mintedStudentNumbers[_studentNumber], "Student number already taken.");

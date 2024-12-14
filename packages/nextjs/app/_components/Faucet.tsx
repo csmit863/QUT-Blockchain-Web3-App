@@ -50,7 +50,7 @@ export function Faucet() {
                 </div>
                 </>
             ) : (
-                <p className="text-sm text-red-500">You must be a club member to use the faucet. Register {" "}
+                <p className="text-sm text-red-500">You must be a club member to use the faucet. Please connect wallet, or register {" "}
                     <a className="link" href="/register">
                          here
                     </a>    
