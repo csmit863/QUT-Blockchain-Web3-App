@@ -1,3 +1,31 @@
+# HOW TO SETUP
+
+step 1. clone the web app.
+$ git clone https://github.com/csmit863/QUT-Blockchain-Web3-App.git
+
+step 2. clone the faucet
+$ git clone --single-branch --branch nft-mint https://github.com/csmit863/QUT-Faucet.git
+
+step 3. build & deploy the web app
+$ cd QUT-Blockchain-Web3-App
+$ yarn chain
+$ yarn deploy
+$ yarn start
+
+step 4. build & deploy the faucet backend server
+note: you must set the relevant environment variables in .env
+$ cd QUT-Faucet
+$ docker compose up -d --build faucet_backend
+
+step 5. hope that steps 1, 2, 3 and 4 worked. 
+
+
+
+
+
+
+
+
 # 🏗 Scaffold-ETH 2
 
 <h4 align="center">
