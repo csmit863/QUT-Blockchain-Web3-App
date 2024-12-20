@@ -7,6 +7,7 @@ import { useScaffoldReadContract } from "~~/hooks/scaffold-eth";  // Import the 
 import { AddressInput } from "~~/components/scaffold-eth";
 import { useState } from "react";
 
+
 export function Faucet() {
     const { address } = useAccount();  // Get the connected wallet address
     const isLoading = true;
@@ -17,8 +18,7 @@ export function Faucet() {
         args: [address],
     });
     const [faucetDestination, setFaucetDestination] = useState("");
-
-
+    
 
     // Check if the user has an NFT
     const hasNFT = nftBalance && nftBalance > 0;

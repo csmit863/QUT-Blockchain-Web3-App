@@ -24,7 +24,7 @@ export function Confirm() {
     setSentEmail(true);
     emailSentRef.current = true; // Mark as sent
     try {
-      const response = await fetch("http://localhost:5000/api/get-otp", {
+      const response = await fetch("http://192.168.68.115:5000/api/get-otp", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -51,7 +51,7 @@ export function Confirm() {
 
   const handleMintMembership = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/get-eth", {
+      const response = await fetch("http://192.168.68.115:5000/api/get-eth", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

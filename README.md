@@ -22,7 +22,7 @@ yarn start
 note: you must set the relevant environment variables in .env
 ```
 cd QUT-Faucet
-docker compose up -d --build faucet_backend
+docker compose -f QUT-Faucet/faucet_backend/compose.yml up -d --build 
 ```
 
 ### step 5. hope that steps 1, 2, 3 and 4 worked. 
