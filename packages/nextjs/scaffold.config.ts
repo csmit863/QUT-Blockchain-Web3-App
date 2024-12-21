@@ -34,5 +34,3 @@ const scaffoldConfig = {
 } as const satisfies ScaffoldConfig;
 
 export default scaffoldConfig;
-
-console.log(scaffoldConfig)

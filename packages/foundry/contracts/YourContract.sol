@@ -24,6 +24,10 @@ contract YourContract is ERC721, Ownable {
     mapping(uint256 => bool) private mintedStudentNumbers; // student number => taken boolean
     mapping(uint256 => uint256) private membershipExpirations; // tokenId => timestamp
 
+    event MintedMembership(address member, uint id);
+    event RevokedMembership(uint id);
+    event RenewedMembership(uint id);
+
     constructor(string memory _name, string memory _symbol, address _owner)
         ERC721(_name, _symbol) Ownable(_owner) {}
 
@@ -38,12 +42,14 @@ contract YourContract is ERC721, Ownable {
         // <payment logic here>
         _mint(_memberAddress, _studentNumber);
         mintedStudentNumbers[_studentNumber] = true;
+        emit MintedMembership(_memberAddress, _studentNumber);
     }
 
     function renewMembership(uint256 _studentNumber) public payable {
         require(ownerOf(_studentNumber) == msg.sender, "Not the owner of the membership.");
         // <payment logic here>
         membershipExpirations[_studentNumber] = block.timestamp + 365 days; // e.g., 1-year renewal
+        emit RenewedMembership(_studentNumber);
     }
 
     function _exists(uint256 _studentNumber) internal view returns (bool) { // Same logic as OpenZeppelin's _exists
@@ -55,6 +61,7 @@ contract YourContract is ERC721, Ownable {
         require(_exists(_studentNumber), "Membership does not exist."); // Ensure token exists
         _burn(_studentNumber); // Burn the NFT
         mintedStudentNumbers[_studentNumber] = false; // Reset student number mapping
+        emit RevokedMembership(_studentNumber);
     }
 
 }

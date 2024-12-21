@@ -18,7 +18,6 @@ export function Faucet() {
         args: [address],
     });
     const [faucetDestination, setFaucetDestination] = useState("");
-    
 
     // Check if the user has an NFT
     const hasNFT = nftBalance && nftBalance > 0;

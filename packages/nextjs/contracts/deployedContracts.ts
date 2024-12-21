@@ -7,7 +7,7 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 const deployedContracts = {
   31337: {
     YourContract: {
-      address: "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+      address: "0x68b1d87f95878fe05b998f19b66f4baba5de1aed",
       abi: [
         {
           type: "constructor",
@@ -440,6 +440,25 @@ const deployedContracts = {
         },
         {
           type: "event",
+          name: "MintedMembership",
+          inputs: [
+            {
+              name: "member",
+              type: "address",
+              indexed: false,
+              internalType: "address",
+            },
+            {
+              name: "id",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
           name: "OwnershipTransferred",
           inputs: [
             {
@@ -453,6 +472,32 @@ const deployedContracts = {
               type: "address",
               indexed: true,
               internalType: "address",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "RenewedMembership",
+          inputs: [
+            {
+              name: "id",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
+            },
+          ],
+          anonymous: false,
+        },
+        {
+          type: "event",
+          name: "RevokedMembership",
+          inputs: [
+            {
+              name: "id",
+              type: "uint256",
+              indexed: false,
+              internalType: "uint256",
             },
           ],
           anonymous: false,
