@@ -1,31 +1,132 @@
 # HOW TO SETUP
 
-## step 1. clone the web app.
+
+##
+## steps 1-9 - WINDOWS USERS ONLY 
+##
+
+# step 1. Open Powershell
+# check if WSL is installed
+
+  wsl --version
+
+# if wsl v2+ installed, skip step 2
+
+# step 2. install WSL (Windows Subsystem for Linux)
+
+  wsl --install
+
+  # restart your pc
+
+# step 3. open ubuntu terminal from powershell
+
+  wt -p "Ubuntu"
+
+# in the linux terminal:
+# step 4. update package lists
+
+  sudo apt update && sudo apt upgrade -y
+
+# step 5. install dependencies
+
+  sudo apt install -y build-essential curl git
+
+# step 6. install nvm (Node Version Manager)
+
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+
+# set the Path, e.g. 
+
+source ~/.bashrc
+
+# step 7. install Node.js using nvm
+
+  nvm install --lts
+
+  nvm use --lts
+
+# step 8. Install Yarn
+
+  npm install -g yarn
+
+# step 9. install WSL extension in VS code
+
+  # In VS Code:
+
+      Open the Extensions view (Ctrl+Shift+X).
+      Search for "WSL" and install it.
+      close VS code
+
+  # Open PowerShell or the Ubuntu terminal and navigate to the project directory
+
+    cd ~/QUT-Blockchain-Web3-App
+
+  # eun the following command to open project dir in VS code
+
+    code .
+
+##
+### in the project dir in  VS code:
+##
+
+# step 1. clone the web app.
 ```
  git clone https://github.com/csmit863/QUT-Blockchain-Web3-App.git
 ```
 
-## step 2. clone the faucet
+# step 2. clone the faucet
 ```
-git clone --single-branch --branch nft-mint https://github.com/csmit863/QUT-Faucet.git
-```
-
-## step 3. build & deploy the web app
-```
-cd QUT-Blockchain-Web3-App
-yarn chain
-yarn deploy
-yarn start
+  git clone --single-branch --branch nft-mint https://github.com/csmit863/QUT-Faucet.git
 ```
 
-## step 4. build & deploy the faucet backend server
-note: you must set the relevant environment variables in .env
-```
-cd QUT-Faucet
-docker compose up -d --build faucet_backend
-```
+# step 3 change directory to project folder
 
-### step 5. hope that steps 1, 2, 3 and 4 worked. 
+  cd QUT-Blockchain-Web3-App
+
+# step 4. install project dependencies
+
+  yarn install
+
+# step 5. close all vs code terminals
+
+# step 6. open a new terminal, run the following:
+
+  yarn chain
+
+# step 7. open another new terminal, run the following:
+
+  yarn deploy
+
+# step 8. open the last new terminal, deploy the app
+
+  yarn start
+
+
+# step 4. build & deploy the faucet backend server
+
+
+# Install Docker
+
+  sudo snap install docker  
+
+# change dir to faucet
+
+  cd QUT-Faucet
+
+## build and deploy the backend server
+## note: you must set the relevant environment variables for the faucet - refer to the faucet readme, and create a .env file with the variables required
+
+  docker compose up -d --build faucet_backend
+
+### editable files for the project are located in /packages/
+
+###
+currently need to correctly install the faucet as a submodule
+once done, docker .env file needs to be set up / created according to the compose.yml file 
+then test account creation function and sepolia faucet function
+after this we can begin integration of the blockchain game through the member front end config
+
+
 
 
 
