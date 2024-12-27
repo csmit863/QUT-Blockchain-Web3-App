@@ -2,10 +2,21 @@
 import Link from "next/link";
 import { InputBase } from "~~/components/scaffold-eth";
 import { useState } from "react";
+import { useAccount } from "wagmi";
+import { useEffect } from "react";
 
 export function Register() {
+  const { address } = useAccount(); // Get the connected wallet address
+
   const [studentNumber, setStudentNumber] = useState<string>("");
   const [desiredAddress, setDesiredAddress] = useState<string>("");
+
+  // Automatically set the wallet address if connected
+  useEffect(() => {
+      if (address) {
+          setDesiredAddress(address);
+      }
+  }, [address]);
 
   return (
     <div className="flex flex-col gap-y-6 lg:gap-y-8 py-8 lg:py-12 justify-center items-center">

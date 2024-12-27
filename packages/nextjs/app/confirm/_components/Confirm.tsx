@@ -76,21 +76,6 @@ export function Confirm() {
     <div className="flex flex-col gap-y-6 lg:gap-y-8 py-8 lg:py-12 justify-center items-center">
       <h1 className="text-xl font-semibold">Confirm Registration</h1>
       {sentEmail && (<p>We've sent a confirmation email to {email}.</p>)}
-      {/*!confirmedEmail ? (
-        <button
-          className="btn btn-primary"
-          onClick={sendConfirmationRequest}
-        >
-          Send Confirmation Email
-        </button>
-      ) : (
-        <button
-          className="btn btn-primary"
-          onClick={handleMintMembership}
-        >
-          Mint Membership
-        </button>
-      )*/}
       {txHash && (
         <p>
           Transaction successful! TX Hash: <a href={`https://sepolia.etherscan.io/tx/${txHash}`} target="_blank" rel="noopener noreferrer">{txHash}</a>
