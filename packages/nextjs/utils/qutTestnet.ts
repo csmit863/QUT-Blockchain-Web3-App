@@ -7,7 +7,7 @@ export const qut = defineChain({
   nativeCurrency: { name: "QUT Testnet", symbol: "ETH", decimals: 18 },
   rpcUrls: {
     default: {
-      http: ["http://192.168.68.115:8545"],
+      http: ["http://120.155.129.75:8545"],
     },
   },
   blockExplorers: {
