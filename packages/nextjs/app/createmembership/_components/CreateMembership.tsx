@@ -79,12 +79,21 @@ export const CreateMembershipComponent: React.FC = () => {
     createMembership();
   }, [jwt]);
 
+  // todo: useScaffoldReadContract to get the contract address and chainId
+  let contract_address = '0x5FbDB2315678afecb367f032d93F642f64180aa3'
+  let chain_id = 452
+  
   return (
     <div className="flex flex-col gap-y-6 lg:gap-y-8 py-8 lg:py-12 justify-center items-center">
       <h1 className="text-xl font-semibold">Create Membership</h1>
       {membershipCreated ? (
         <>
           <p>Membership created successfully!</p>
+          <p>To view your membership, first ensure you are on the right chain, the QUT Testnet (link to QUT Testnet config). go to your wallet, go to the NFTs tab or tokens tab, select 'import nft/token'.</p>\
+          <p>Enter the following details:</p>
+          <p>contract address: {contract_address}</p>
+          <p>token id: (your student number) e.g. 11251531</p>
+
           {txReceipt && <TxReceipt txResult={txReceipt} />}
         </>
       ) : error ? (
