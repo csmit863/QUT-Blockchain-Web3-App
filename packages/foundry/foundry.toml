@@ -5,7 +5,7 @@ libs = ['lib']
 fs_permissions = [{ access = "read-write", path = "./"}]
 
 [rpc_endpoints]
-qut = "http://192.168.0.39:8545"
+qut = "https://testnet.qutblockchain.club"
 default_network = "http://127.0.0.1:8545"
 localhost = "http://127.0.0.1:8545"
 
