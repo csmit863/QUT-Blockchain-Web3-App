@@ -22,8 +22,10 @@ export const CreateMembershipComponent: React.FC = () => {
     const createMembership = async () => {
       if (!jwt) return;
 
-      try {
-        const response = await fetch("http://192.168.68.115:5000/api/create-membership", {
+      try {     // avoid using hardcoded URLs. This is the emailer confirmation service
+        let url = "https://subscribe.qutblockchain.club/api/create-membership";
+        console.log(url);
+        const response = await fetch(url, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -45,8 +47,10 @@ export const CreateMembershipComponent: React.FC = () => {
 
         // Polling the RPC node for transaction receipt
         let receipt = null;
-        while (!receipt) {
-          const receiptResponse = await fetch("http://192.168.68.115:8545", {
+        while (!receipt) { // use the Scaffold ETH component to fetch from the RPC url
+          let url = "https://testnet.qutblockchain.club";
+          console.log(url)
+          const receiptResponse = await fetch(url, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

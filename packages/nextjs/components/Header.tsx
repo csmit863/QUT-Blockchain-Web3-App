@@ -44,11 +44,11 @@ export const menuLinks: HeaderMenuLink[] = [
     href: "https://discord.gg/yaEeAcZqz5",
     icon: <ChatBubbleOvalLeftEllipsisIcon className="h-4 w-4"/>
   },
-  {
+  /*{
     label: "Debug Contracts",
     href: "/debug",
     icon: <BugAntIcon className="h-4 w-4" />,
-  },
+  },*/
 ];
 
 export const HeaderMenuLinks = () => {

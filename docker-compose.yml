@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  web_app:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"  
+    network_mode: "host"  # Use host network mode for better performance and direct access
+    command: yarn start -H 0.0.0.0  # Command to run the app after dependencies are installed
