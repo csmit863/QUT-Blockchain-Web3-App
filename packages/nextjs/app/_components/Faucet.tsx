@@ -43,7 +43,7 @@ export function Faucet() {
         setTxReceipt(null); // Clear previous receipt
         let receipt = null;
         try {
-            const response = await fetch("http://api:5000/endpoint", {
+            const response = await fetch("todo", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
