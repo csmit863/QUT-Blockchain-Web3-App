@@ -9,6 +9,14 @@ import { useState, useEffect } from "react";
 import { TxReceipt } from "../debug/_components/contract";
 
 export function Faucet() {
+    /**
+     * The faucet should require a signature proving that the requester has a club NFT.
+     * Once the signature is verified, send the funds to the designated address on the specified network. 
+     * Should require no gas fees from the user. 
+     * It would also be useful if you could use the faucet as a non-member.
+     * 
+     */
+
     const { address } = useAccount(); // Get the connected wallet address
 
     const { data: nftBalance } = useScaffoldReadContract({
@@ -37,7 +45,9 @@ export function Faucet() {
         setSelectedNetwork(e.target.value);
     };
 
-    // Mock API Call
+    // TODO: make a function which asks for a signature from the user proving they own the club nft.
+    // const getSignature
+    // this function (below) should send the signature to the backend for verification and await success/failure
     const handleGetTestnetETH = async () => {
         setIsLoading(true); // Set loading state
         setTxReceipt(null); // Clear previous receipt
@@ -73,6 +83,9 @@ export function Faucet() {
             setIsLoading(false); // Stop loading
         }
     };
+
+
+    
 
     return (
         <div id="faucet" className="py-16 bg-[url(/dot-texture.svg)] bg-repeat">
@@ -142,6 +155,16 @@ export function Faucet() {
                     )}
                     <div className="mt-4">
                         <Image src={tap} alt="tap" className="w-16 opacity-90 mx-auto" />
+                    </div>
+                    <div>
+                        <p>
+                            Faucet not available? <br/> Here are some other testnet faucets:
+                        </p>
+                        {/** list of faucets */}
+                        <a href="https://cloud.google.com/application/web3/faucet/ethereum">Google Faucet</a><br/>
+                        <a href="https://www.alchemy.com/faucets">Alchemy Faucets</a><br/>
+                        <a href="https://faucet.quicknode.com/ethereum">Quicknode Faucets</a><br/>
+                        <a href="https://sepolia-faucet.pk910.de/">Sepolia PoW Faucet</a>
                     </div>
                 </div>
             </div>
