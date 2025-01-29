@@ -1,6 +1,6 @@
+import { Confirm } from "./_components/Confirm";
 import type { NextPage } from "next";
 import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
-import { Confirm } from "./_components/Confirm";
 
 export const metadata = getMetadata({
   title: "Confirm Registration",
@@ -11,7 +11,6 @@ const ConfirmPage: NextPage = () => {
   return (
     <>
       <Confirm />
-      
     </>
   );
 };

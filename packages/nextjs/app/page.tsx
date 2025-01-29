@@ -1,12 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
+import { Faucet } from "./_components/Faucet";
 import type { NextPage } from "next";
 import { useAccount } from "wagmi";
 import { Address } from "~~/components/scaffold-eth";
 import qutblockchainlogo from "~~/public/qutblockchainlogo.png";
-import Image from "next/image";
-import { Faucet } from "./_components/Faucet";
+
 /*
 point of contact
 information source
@@ -29,11 +30,12 @@ const Home: NextPage = () => {
             </h1>
             <p className="mt-6 leading-relaxed md:leading-8">
               Greetings, future member! Welcome to the QUT Blockchain Club website.
-              <br></br> 
-              Our club is dedicated to fostering the development of blockchain technology as well as spreading knowledge about blockchain at QUT. 
               <br></br>
-              To join, simply hit "Join Club →", then enter your QUT email and click "mint membership". 
-              Upon registration you will be entitled to access to all of our shared resources and services including labs,
+              Our club is dedicated to fostering the development of blockchain technology as well as spreading knowledge
+              about blockchain at QUT.
+              <br></br>
+              To join, simply hit "Join Club →", then enter your QUT email and click "mint membership". Upon
+              registration you will be entitled to access to all of our shared resources and services including labs,
               workshop events, networking, testnet faucets and much more.
             </p>
             <div className="mt-10 flex items-center gap-x-6">
@@ -62,25 +64,24 @@ const Home: NextPage = () => {
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h2 className="text-3xl font-dotGothic tracking-wide md:text-4xl">What we do</h2>
             <p className="mt-6 leading-relaxed md:leading-8 md:text-lg">
-              Have a read of our constitution {" "}
+              Have a read of our constitution{" "}
               <a className="link" href="https://github.com/buidlguidl/ctf-devcon/" target="_blank">
                 here.
-              </a><br/><br/>
-              Our aim is to provide a platform for like-minded students to connect locally and discuss, build, experiment and have fun onchain.
+              </a>
+              <br />
+              <br />
+              Our aim is to provide a platform for like-minded students to connect locally and discuss, build,
+              experiment and have fun onchain.
             </p>
             <a href="#prizes" className="btn btn-outline rounded-md">
-            Upcoming Events
+              Upcoming Events
             </a>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
-            <dl className="grid max-w-xl grid-cols-1 gap-x-24 gap-y-16 lg:max-w-none lg:grid-cols-4">
-              lorem ipsum
-            </dl>
+            <dl className="grid max-w-xl grid-cols-1 gap-x-24 gap-y-16 lg:max-w-none lg:grid-cols-4">lorem ipsum</dl>
           </div>
           <div className="flex items-center flex-col flex-grow pt-10">
-
-            
-          <div className="px-5">
+            <div className="px-5">
               <div className="flex justify-center items-center space-x-2 flex-col sm:flex-row">
                 <p className="my-2 font-medium">Connected Address:</p>
                 <Address address={connectedAddress} />
@@ -88,16 +89,14 @@ const Home: NextPage = () => {
 
               <div className="flex justify-center items-center space-x-2 flex-col sm:flex-row">
                 <p className="my-2 font-medium">Helpful Services</p>
-                  <Link href="https://github.com/csmit863/QUT-Faucet"><button>
-                    (QUT Faucet)
-                  </button></Link>
-                  <Link href=""><button>
-                    (Node Endpoints)
-                  </button></Link>
+                <Link href="https://github.com/csmit863/QUT-Faucet">
+                  <button>(QUT Faucet)</button>
+                </Link>
+                <Link href="">
+                  <button>(Node Endpoints)</button>
+                </Link>
               </div>
-
             </div>
-
           </div>
         </div>
       </div>
@@ -110,7 +109,6 @@ const Home: NextPage = () => {
       </div>
       <Faucet />
     </>
-
   );
 };
 

@@ -1,6 +1,6 @@
+import { CreateMembershipComponent } from "./_components/CreateMembership";
 import type { NextPage } from "next";
 import { getMetadata } from "~~/utils/scaffold-eth/getMetadata";
-import { CreateMembershipComponent } from "./_components/CreateMembership";
 
 export const metadata = getMetadata({
   title: "Create Membership",
@@ -8,11 +8,11 @@ export const metadata = getMetadata({
 });
 
 const CreateMembership: NextPage = () => {
-    return (
-      <>
-        <CreateMembershipComponent />
-      </>
-    );
-  };
-  
+  return (
+    <>
+      <CreateMembershipComponent />
+    </>
+  );
+};
+
 export default CreateMembership;

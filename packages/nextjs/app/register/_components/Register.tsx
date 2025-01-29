@@ -1,9 +1,10 @@
 "use client";
-import Link from "next/link";
-import { InputBase } from "~~/components/scaffold-eth";
+
 import { useState } from "react";
-import { useAccount } from "wagmi";
 import { useEffect } from "react";
+import Link from "next/link";
+import { useAccount } from "wagmi";
+import { InputBase } from "~~/components/scaffold-eth";
 
 export function Register() {
   const { address } = useAccount(); // Get the connected wallet address
@@ -13,9 +14,9 @@ export function Register() {
 
   // Automatically set the wallet address if connected
   useEffect(() => {
-      if (address) {
-          setDesiredAddress(address);
-      }
+    if (address) {
+      setDesiredAddress(address);
+    }
   }, [address]);
 
   return (

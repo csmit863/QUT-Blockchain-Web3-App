@@ -655,30 +655,20 @@ const deployedContracts = {
       ],
       inheritedFunctions: {
         approve: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-        balanceOf:
-          "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-        getApproved:
-          "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-        isApprovedForAll:
-          "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+        balanceOf: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+        getApproved: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+        isApprovedForAll: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
         name: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
         ownerOf: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-        safeTransferFrom:
-          "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-        setApprovalForAll:
-          "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-        supportsInterface:
-          "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+        safeTransferFrom: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+        setApprovalForAll: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+        supportsInterface: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
         symbol: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-        tokenURI:
-          "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-        transferFrom:
-          "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+        tokenURI: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+        transferFrom: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
         owner: "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
-        renounceOwnership:
-          "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
-        transferOwnership:
-          "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+        renounceOwnership: "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+        transferOwnership: "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
       },
     },
   },
@@ -1332,30 +1322,20 @@ const deployedContracts = {
       ],
       inheritedFunctions: {
         approve: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-        balanceOf:
-          "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-        getApproved:
-          "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-        isApprovedForAll:
-          "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+        balanceOf: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+        getApproved: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+        isApprovedForAll: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
         name: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
         ownerOf: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-        safeTransferFrom:
-          "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-        setApprovalForAll:
-          "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-        supportsInterface:
-          "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+        safeTransferFrom: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+        setApprovalForAll: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+        supportsInterface: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
         symbol: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-        tokenURI:
-          "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
-        transferFrom:
-          "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+        tokenURI: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
+        transferFrom: "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol",
         owner: "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
-        renounceOwnership:
-          "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
-        transferOwnership:
-          "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+        renounceOwnership: "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+        transferOwnership: "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
       },
     },
   },

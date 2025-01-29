@@ -16,7 +16,7 @@ const MembersPage: NextPage = () => {
          * It would be cool if each member had their own personal profile page that they could
          * share with others, e.g. on their resume/cv. The page could include their name, student number,
          * personal email, and a html or markdown page of their own creation. The page could then be uploaded
-         * to IPFS for decentralised storage. The IPFS hashes could then be stored in a lightweight database, or 
+         * to IPFS for decentralised storage. The IPFS hashes could then be stored in a lightweight database, or
          * dynamically render on the page when typed into the URL.
          */}
       </div>

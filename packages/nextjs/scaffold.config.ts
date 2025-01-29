@@ -1,5 +1,5 @@
-import * as chains from "viem/chains";
 import { qut } from "./utils/qutTestnet";
+import * as chains from "viem/chains";
 
 export type ScaffoldConfig = {
   targetNetworks: readonly chains.Chain[];

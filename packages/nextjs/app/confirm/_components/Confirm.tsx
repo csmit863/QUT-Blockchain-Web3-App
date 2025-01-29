@@ -1,7 +1,8 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
-import { useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
+
+import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { useScaffoldWriteContract } from "~~/hooks/scaffold-eth";
 
 export function Confirm() {
   const searchParams = useSearchParams();
@@ -9,7 +10,7 @@ export function Confirm() {
   const desiredAddress = searchParams.get("desiredAddress") || "";
 
   const { writeContractAsync: mintMembership } = useScaffoldWriteContract("YourContract");
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [confirmedEmail, setConfirmedEmail] = useState(false);
   const [sentEmail, setSentEmail] = useState(false);
   const [txHash, setTxHash] = useState("");
@@ -75,10 +76,13 @@ export function Confirm() {
   return (
     <div className="flex flex-col gap-y-6 lg:gap-y-8 py-8 lg:py-12 justify-center items-center">
       <h1 className="text-xl font-semibold">Confirm Registration</h1>
-      {sentEmail && (<p>We've sent a confirmation email to {email}.</p>)}
+      {sentEmail && <p>We've sent a confirmation email to {email}.</p>}
       {txHash && (
         <p>
-          Transaction successful! TX Hash: <a href={`https://sepolia.etherscan.io/tx/${txHash}`} target="_blank" rel="noopener noreferrer">{txHash}</a>
+          Transaction successful! TX Hash:{" "}
+          <a href={`https://sepolia.etherscan.io/tx/${txHash}`} target="_blank" rel="noopener noreferrer">
+            {txHash}
+          </a>
         </p>
       )}
       {error && <p className="text-red-500">{error}</p>}
