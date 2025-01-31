@@ -1,20 +1,19 @@
-# Use an official Node.js runtime as a parent image
 FROM node:20
 
-# Enable Corepack (which manages Yarn versions)
+# Enable Corepack for Yarn
 RUN corepack enable
 
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the package.json and yarn.lock first (to leverage Docker cache)
-COPY package.json yarn.lock ./
-
-# Install the app dependencies using the correct Yarn version
-RUN yarn install
-
-# Copy the rest of the application
+# Copy everything into the container (including all workspaces)
 COPY . .
 
-# Expose the port that the app will run on (3000)
+# Install dependencies across all workspaces
+RUN yarn install
+
+# Expose the port your app will run on (optional)
 EXPOSE 3000
+
+# Start the app
+CMD ["yarn", "start"]

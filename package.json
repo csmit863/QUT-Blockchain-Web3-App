@@ -44,6 +44,8 @@
     "node": ">=18.18.0"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.15"
+    "@tailwindcss/typography": "^0.5.15",
+    "next": "^15.1.6",
+    "styled-jsx": "^5.1.6"
   }
 }
