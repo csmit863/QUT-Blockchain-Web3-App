@@ -1,19 +1,20 @@
-FROM node:20
+# Use an official Node.js runtime as a parent image
+FROM node:18
 
-# Enable Corepack for Yarn
+# Enable Corepack (which manages Yarn versions)
 RUN corepack enable
 
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy everything into the container (including all workspaces)
-COPY . .
+# Copy the package.json
+#COPY package.json ./
 
-# Install dependencies across all workspaces
+# Copy the packages/nextjs directory into the container
+#COPY packages/nextjs ./packages/nextjs
+COPY . .
+# Install the app dependencies using the correct Yarn version
 RUN yarn install
 
-# Expose the port your app will run on (optional)
-EXPOSE 3000
-
-# Start the app
-CMD ["yarn", "start"]
+# Expose the port that the app will run on (3000)
+CMD ["yarn", "start", "-H", "0.0.0.0"]
