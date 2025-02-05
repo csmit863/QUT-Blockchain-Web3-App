@@ -22,13 +22,43 @@ const helpfulResources = [
     date: "2024-01-01",
   },
   {
+    name: "Awesome Blockchain",
+    source: "https://github.com/yjjnls/awesome-blockchain",
+    tags: ["beginner", "research", "blockchain"],
+  },
+  {
+    name: "Bitcoin.org",
+    source: "https://bitcoin.org/en/",
+    tags: ["beginner", "research", "bitcoin"],
+  },
+  {
     name: "Ethereum.org",
     source: "https://ethereum.org/en/",
     tags: ["research", "beginner", "ethereum"],
     date: "2023-06-15",
   },
-  { name: "Devcon", source: "https://devcon.org/", tags: ["conference", "events"], date: "2023-10-01" },
-  { name: "Austin Griffiths", source: "https://austingriffith.com/", tags: ["beginner", "development", "ethereum"] },
+  {
+    name: "Cardano.org",
+    source: "https://cardano.org/",
+    tags: ["research", "beginner", "cardano"],
+  },
+  {
+    name: "Monero",
+    source: "https://www.getmonero.org/",
+    tags: ["research", "beginner", "monero"],
+  },
+
+  {
+    name: "Devcon",
+    source: "https://devcon.org/",
+    tags: ["conference", "events"],
+    date: "2023-10-01",
+  },
+  {
+    name: "Austin Griffiths",
+    source: "https://austingriffith.com/",
+    tags: ["beginner", "development", "ethereum"],
+  },
   {
     name: "Taproot Wizards",
     source: "https://taprootwizards.com/",
@@ -38,6 +68,26 @@ const helpfulResources = [
     name: "Awesome Ethereum",
     source: "https://github.com/ttumiel/Awesome-Ethereum",
     tags: ["github", "beginner", "ethereum", "development"],
+  },
+  {
+    name: "Revert Finance",
+    source: "https://revert.finance/",
+    tags: ["analytics", "defi", "ethereum", "AMM"],
+  },
+  {
+    name: "Ethereum Academic Grants",
+    source: "https://esp.ethereum.foundation/academic-grants",
+    tags: ["ethereum", "academic", "grant", "research"],
+  },
+  {
+    name: "Immunefi",
+    source: "https://immunefi.com/",
+    tags: ["bounty", "audit", "smart contract", "development"],
+  },
+  {
+    name: "Labrys",
+    source: "https://labrys.io/",
+    tags: ["company", "blockchain", "development", "smart contract"],
   },
 ];
 
